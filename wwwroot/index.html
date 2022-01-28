@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Fun.Blazor.Sample</title>
+    <base href="/" />
+    <link href="manifest.webmanifest" rel="manifest" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div id="main">Loading...</div>
+    <noscript
+      >We're sorry but you need to enable Javascript for the app
+      correctly</noscript
+    >
+    <script>
+      navigator.serviceWorker.register("service-worker.js");
+    </script>
+    <script src="_framework/blazor.webassembly.js"></script>
+  </body>
+</html>

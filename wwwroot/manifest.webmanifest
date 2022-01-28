@@ -1,0 +1,12 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "Fun.Blazor.Sample",
+    "short_name": "Fun.Blazor.Sample",
+    "start_url": "/",
+    "display": "standalone",
+    "display_override": [],
+    "icons": [],
+    "background_color": "#41403e",
+    "theme_color": "#41403e",
+    "orientation": "portrait"
+}
