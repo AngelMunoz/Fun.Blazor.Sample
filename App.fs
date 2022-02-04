@@ -8,19 +8,19 @@ module App =
   let private counter initial =
     adaptiview () {
       let! counter, setCounter = cval(initial).WithSetter()
-      p () { childContent $"Count: {counter}" }
+      p { childContent $"Count: {counter}" }
 
-      button () {
+      button {
         onclick (fun _ -> setCounter (counter + 1))
         childContent "Increment"
       }
 
-      button () {
+      button {
         onclick (fun _ -> setCounter (counter - 1))
         childContent "Decrement"
       }
 
-      button () {
+      button {
         onclick (fun _ -> setCounter (initial))
         childContent "Reset"
       }
@@ -28,21 +28,16 @@ module App =
     }
 
   let View () =
-    article () {
+    article {
       class' "app"
 
-      childContent [
-        main () {
-          childContent [
-            h1 () { childContent "Welcome to Fun.Blazor!" }
-            section () { childContent (counter 0) }
-            section () { childContent (counter 100) }
-
-            ]
-        }
-        footer () {
-          class' "app-footer"
-          childContent "Fun.Blazor.Sample"
-        }
-      ]
+      main {
+          h1 { "Welcome to Fun.Blazor!" }
+          section { childContent (counter 0) }
+          section { childContent (counter 100) }
+      }
+      footer{
+        class' "app-footer"
+        childContent "Fun.Blazor.Sample"
+      }
     }

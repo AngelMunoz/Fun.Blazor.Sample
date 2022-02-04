@@ -7,8 +7,8 @@ let builder =
   WebAssemblyHostBuilder.CreateDefault(Environment.GetCommandLineArgs())
 
 builder
-  .AddFunBlazorNode("#main", App.View())
-  .Services.AddFunBlazor()
+  .AddFunBlazor("#main", App.View())
+  .Services.AddFunBlazorWasm()
 |> ignore
 
 builder.Build().RunAsync()
